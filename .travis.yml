@@ -10,23 +10,14 @@ script:
 
 deploy:
         #edge: true
-        #provider: elasticbeanstalk
-        #region: "us-east-2"
-        #app: "docker"
-        #env: "Docker-env"
-        #bucket_name: "elasticbeanstalk-us-east-2-487538390303"
-        #bucket_path: "docker"
-        #on:
-        #        branch: master
-        #access_key_id: $AWS_ACCESS_KEY
-        #secret_access_key: $AWS_SECRET_KEY
-
-
-  provider: elasticbeanstalk
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  region: "us-east-2"
-  app: "docker"
-  env: "Docker-env"
-  bucket_name: "elasticbeanstalk-us-east-2-487538390303"
+        provider: elasticbeanstalk
+        region: "us-east-2"
+        app: "docker"
+        env: "Docker-env"
+        bucket_name: "elasticbeanstalk-us-east-2-487538390303"
+        bucket_path: "docker"
+        on:
+                branch: master
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key: $AWS_SECRET_KEY
 
