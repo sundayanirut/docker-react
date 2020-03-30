@@ -8,7 +8,7 @@ before_install:
 script:
         - docker run sundayanirut/docker-react npm run test -- --coverage
         
-#before_deploy: "echo 'ready?'"
+before_deploy: "echo 'ready?'"
 deploy:
         # provider: elasticbeanstalk
         #region: "ap-southeast-1"
@@ -23,9 +23,9 @@ deploy:
 
         provider: elasticbeanstalk
   access_key_id:
-          secure: "Encrypted $AWS_ACCESS_KEY"
+          secure: "$AWS_ACCESS_KEY"
     secret_access_key:
-          secure: "Encrypted $AWS_SECRET_KEY"
+          secure: "$AWS_SECRET_KEY"
     region: "ap-southeast-1"
   app: "docker"
   env: "Docker-env"
