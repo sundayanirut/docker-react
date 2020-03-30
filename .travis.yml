@@ -8,7 +8,7 @@ before_install:
 script:
         - docker run sundayanirut/docker-react npm run test -- --coverage
         
-before_deploy: "echo 'ready?'"
+#before_deploy: "echo 'ready?'"
 deploy:
         # provider: elasticbeanstalk
         #region: "ap-southeast-1"
