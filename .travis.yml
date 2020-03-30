@@ -9,6 +9,7 @@ script:
         - docker run sundayanirut/docker-react npm run test -- --coverage
         
 deploy:
+        edge: true
         provider: elasticbeanstalk
         region: "ap-southeast-1"
         app: "docker"
@@ -18,8 +19,7 @@ deploy:
         on:
                 branch: master
         access_key_id: $AWS_ACCESS_KEY
-        secret_access_key: 
-                secure: "$AWS_SECRET_KEY"
+        secret_access_key: $AWS_SECRET_KEY
 
         #provider: elasticbeanstalk
   #access_key_id:
